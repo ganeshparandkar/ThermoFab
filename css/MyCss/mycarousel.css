@@ -1,0 +1,277 @@
+.mycarousel {
+    position: relative;
+    /* height: 700px; */
+    height: 60rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* sp */
+    filter: blur(3px);
+}
+
+.carousel__track-container {
+    /* background: lightgreen; */
+    /* padding: 10px; */
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 400ms ease-in;
+}
+
+.corousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.corousel__slide.current-slide {
+    z-index: 5;
+}
+
+.mycarousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    background-color: rgba(240, 248, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    padding: 3px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.mycarousel__button:focus {
+    border: none;
+}
+
+.mycarousel__button--left {
+    left: 3%;
+}
+
+.mycarousel__button--right {
+    right: 3%;
+}
+
+.mycarousel__button img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.mycarousel__nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    bottom: 50px;
+    z-index: 10;
+}
+
+.mycarousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 7px;
+    cursor: pointer;
+    /* Changed color by SP */
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.mycarousel__indicator.current-slide {
+    /* Changed color by SP */
+    background: rgb(255, 255, 255);
+}
+
+.is-hidden {
+    display: none;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------
+    SP      
+---------------------------------------------------------------------------------------------------------------------*/
+
+#learnmore .btn {
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 0px;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding: 14px 42px;
+    margin-top: 42px;
+    margin-right: 12px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#learnmore .btn-default:hover {
+    background: #ffffff;
+    color: #333333;
+    border-color: transparent;
+}
+
+/* ------------------------------Corousal text styling ---------------------------- */
+
+/*
+/*slide1_text>h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+#slide2_text>h1 {
+    color: #00ffd0;
+}
+
+#slide3_text>h1 {
+    color: #ff1500;
+}
+
+#slide4_text>h1 {
+    color: #ff00dd;
+}
+
+#slide5_text>h1 {
+    padding-left: 40%;
+    padding-right: 40%;
+}
+
+#slide6_text>h1 {
+    color: #5d00ff;
+}
+*/
+
+/*-------------------------------------------------------------------------------------------------------------------
+    Cards Style    
+---------------------------------------------------------------------------------------------------------------------*/
+
+#speakers ul {
+    list-style-position: outside;
+    list-style-type: square;
+    text-align: left;
+}
+
+#speakers .head {
+    height: 70px;
+}
+
+#speakers .speakers-wrapper:hover {
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+}
+
+/* sp */
+
+.makemeblur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    padding: 12.5rem;
+    transform: translate(-50%, -50%);
+    /* border: blue 1px dashed; */
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bg-text .container {
+    display: flexbox;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    height: 20em;
+    text-align: center;
+    /* border: 1px rgb(117, 117, 117) solid; */
+    width: fit-content;
+}
+
+.bg-text {
+    /* border: red dashed 2px; */
+    height: 25em;
+    width: 80vw;
+    padding: 3.5em;
+}
+
+@media (max-width: 760px) {
+    .carousel__image {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        /* sp */
+        filter: blur(3px);
+    }
+    .makemeblur {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100%;
+        width: 100%;
+        padding-left: 2.7em;
+        padding-top: 12em;
+        transform: translate(-50%, -50%);
+        /* border: blue 1px dashed; */
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .container h1, h3, h2 {
+        font-size: 22px;
+    }
+    .bg-text {
+        display: flow-root;
+        /* border: red dashed 2px; */
+        height: 20em;
+        padding: 0.5em;
+    }
+    /* sp */
+    #learnmore .btn {
+        background: transparent;
+        border: 2px solid #ffffff;
+        border-radius: 0px;
+        color: #ffffff;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 12px;
+        padding: 7px 21px;
+        margin-top: 21px;
+        margin-right: 6px;
+    }
+    /* sp */
+    #slide5_text h1, h2, h3 {
+        font-size: medium;
+    }
+    .go-top {
+        background-color: #222;
+        bottom: 1em;
+        right: 1em;
+        color: #ffffff;
+        font-size: 20px;
+        display: none;
+        position: fixed;
+        text-decoration: none;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+    }
+}

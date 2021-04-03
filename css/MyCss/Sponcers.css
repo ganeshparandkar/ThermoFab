@@ -1,0 +1,12 @@
+#sponsors .img-responsive {
+    /* border: 2px solid red; */
+    /* border-radius: 25px; */
+    height: 20rem;
+    width: 40rem;
+    object-fit: scale-down;
+}
+
+#hrline {
+    border: 1px solid black;
+    
+}
